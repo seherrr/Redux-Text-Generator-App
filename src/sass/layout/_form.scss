@@ -1,0 +1,51 @@
+@import '../base/typography';
+@import '../Helpers/variables';
+
+.form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &-text {
+            font-size: $medium-font-size;
+            color: $white;
+            font-weight: $font-medium;
+            margin-bottom: 3px;
+        }
+
+        &-input {
+            padding: 5px;
+            border-radius: $radius;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            &-text {
+                font-size: $small-font-size;
+            }
+        }
+    
+        @media screen and (min-width: $small-screen) {
+            &-text {
+                font-size: $medium-font-size;
+            }
+        }
+    
+        @media screen and (min-width: $medium-screen) {
+            &-text {
+                font-size: $big-font-size;
+            }
+        }
+    }
+
+    @media screen and (max-width: $small-screen) {
+        & {
+            flex-direction: column;
+        }
+    }
+}
